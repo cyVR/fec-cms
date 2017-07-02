@@ -127,7 +127,7 @@
         <li>
           <p>
             <a class="pdf-link" href="{{ link }}">
-              {% if self.sunshine_act_links|splitlines|length > 1 and forloop.counter == 1%}Amended{% endif %}
+              {% if forloop.counter < self.sunshine_act_links|splitlines|length %}Amended{% endif %}
               Sunshine Act Notice
             </a>
           </p>
